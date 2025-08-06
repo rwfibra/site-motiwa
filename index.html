@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motiwa Telecom - A Melhor TV e Internet da Região</title>
+    <title>Motiwa Telecom - Em Breve</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -11,7 +11,7 @@
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
     
     <!-- Favicon (ícone da aba do navegador) -->
     <link rel="icon" href="https://rwfibra.github.io/site-motiwa/logo-topo.jpg">
@@ -20,493 +20,43 @@
         /* Estilo para a fonte Inter */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* bg-slate-50 */
-        }
-        
-        /* Efeito de gradiente para botões e destaques */
-        .gradient-btn {
-            background-image: linear-gradient(to right, #F97316, #FB923C);
-            transition: all 0.3s ease-in-out;
-        }
-        .gradient-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(251, 146, 60, 0.4);
-        }
-
-        /* Efeito de hover para os cards de planos */
-        .plan-card {
-            transition: all 0.3s ease-in-out;
-            border: 1px solid #e2e8f0; /* border-slate-200 */
-        }
-        .plan-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        }
-        
-        /* Estilos para o Carrossel do Topo */
-        .hero-carousel-container {
-            overflow: hidden;
-            position: relative;
-        }
-        .hero-carousel-track {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        .hero-carousel-slide {
-            min-width: 100%;
-            box-sizing: border-box;
-            height: 90vh; /* Altura do slide */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Fundo dos slides do carrossel */
-        .slide-bg-1 { background-color: #f1f5f9; }
-        .slide-bg-2 { background-color: #ffedd5; }
-        .slide-bg-3 { background-color: #dbeafe; }
-
-        /* Formas abstratas para o fundo dos slides */
-        .slide-shape {
-            content: '';
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.5;
-        }
-        
-        /* Estilo para a lista de canais em colunas no Modal (MAIS JUNTOS) */
-        .channel-list {
-            column-count: 4; /* Aumentado para 4 colunas */
-            column-gap: 1.5rem; /* Espaçamento reduzido */
-        }
-        @media (max-width: 1024px) {
-            .channel-list {
-                column-count: 3;
-            }
-        }
-        @media (max-width: 768px) {
-            .channel-list {
-                column-count: 2;
-            }
-        }
-        @media (max-width: 640px) {
-            .channel-list {
-                column-count: 1;
-            }
-        }
-        .channel-list p {
-            break-inside: avoid-column; /* Evita que um item quebre entre colunas */
         }
     </style>
 </head>
-<body class="text-slate-800">
+<body class="bg-slate-50">
 
-    <!-- Cabeçalho -->
-    <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- Logo -->
-            <a href="index.html">
-                <img src="https://rwfibra.github.io/site-motiwa/logo-topo.jpg" alt="Logo Motiwa Telecom" class="h-10 md:h-12">
+    <div class="flex flex-col items-center justify-center min-h-screen text-center p-6">
+        
+        <!-- Logo -->
+        <img src="https://rwfibra.github.io/site-motiwa/logo-topo.jpg" alt="Logo Motiwa Telecom" class="h-16 mb-8">
+
+        <!-- Título Principal -->
+        <h1 class="text-4xl md:text-5xl font-black text-slate-800">Nosso novo site está chegando!</h1>
+        
+        <!-- Subtítulo -->
+        <p class="mt-4 text-lg text-slate-600 max-w-xl">
+            Estamos preparando uma experiência incrível para você. Enquanto isso, você pode entrar em contato ou acessar a sua fatura pelos links abaixo.
+        </p>
+
+        <!-- Animação de Carregamento -->
+        <div class="w-24 h-2 my-8 bg-orange-200 rounded-full overflow-hidden">
+            <div class="w-1/3 h-full bg-orange-500 rounded-full animate-pulse"></div>
+        </div>
+
+        <!-- Botões de Ação -->
+        <div class="flex flex-col sm:flex-row gap-4">
+            <a href="https://wa.me/5511970632791?text=Olá!%20Gostaria%20de%20mais%20informações." target="_blank" class="bg-green-500 text-white font-bold py-3 px-6 rounded-full flex items-center justify-center gap-2 hover:bg-green-600 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M10.5 2a8.5 8.5 0 105.46 15.53l-1.2-1.2A6.5 6.5 0 1110.5 4a6.43 6.43 0 014.2 1.54l-1.52 1.52a.5.5 0 00.35.85H17a.5.5 0 00.5-.5V4.18a.5.5 0 00-.85-.35l-1.52 1.52A8.44 8.44 0 0010.5 2z" />
+                  <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.93 6.34a.5.5 0 01.7.09l1.5 2.5a.5.5 0 01-.2.64l-1.1 1.1a.5.5 0 00-.14.35 6.5 6.5 0 006.5 6.5.5.5 0 00.35-.14l1.1-1.1a.5.5 0 01.64-.2l2.5 1.5a.5.5 0 01.09.7l-1.5 2.5a.5.5 0 01-.64.2l-1.1-1.1a.5.5 0 00-.35.14A8.5 8.5 0 014.93 6.34z" />
+                </svg>
+                <span>Fale Conosco</span>
             </a>
-            
-            <!-- Menu de Navegação (Desktop) e Botão de Fatura -->
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="#planos" class="text-slate-600 hover:text-orange-500 font-semibold transition-colors">Nossos Planos</a>
-                <button id="open-channels-btn-header" class="text-slate-600 hover:text-orange-500 font-semibold transition-colors">Canais de TV</button>
-                <a href="#cobertura" class="text-slate-600 hover:text-orange-500 font-semibold transition-colors">Consultar Cobertura</a>
-                <a href="https://motiwatelecom.sgp.net.br/accounts/central/login" target="_blank" class="gradient-btn text-white font-bold py-2 px-5 rounded-full shadow-md">
-                    2ª Via de Fatura
-                </a>
-            </div>
-            
-            <!-- Botão de Menu (Mobile) -->
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-slate-600 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
-        </nav>
-        <!-- Menu Mobile -->
-        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
-            <a href="#planos" class="block py-3 px-6 text-slate-600 hover:bg-slate-100">Nossos Planos</a>
-            <button id="open-channels-btn-mobile" class="w-full text-left block py-3 px-6 text-slate-600 hover:bg-slate-100">Canais de TV</button>
-            <a href="#cobertura" class="block py-3 px-6 text-slate-600 hover:bg-slate-100">Consultar Cobertura</a>
-            <div class="p-4">
-                 <a href="https://motiwatelecom.sgp.net.br/accounts/central/login" target="_blank" class="block text-center gradient-btn text-white font-bold py-3 px-4 rounded-full shadow-md">
-                    2ª Via de Fatura
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <!-- Seção Carrossel do Topo -->
-        <section id="hero-carousel" class="hero-carousel-container">
-            <div id="hero-carousel-track" class="hero-carousel-track">
-                <!-- Slide 1 -->
-                <div class="hero-carousel-slide slide-bg-1">
-                    <div class="slide-shape" style="width: 500px; height: 500px; top: -10%; left: -10%; background-color: rgba(251, 146, 60, 0.2);"></div>
-                    <div class="slide-shape" style="width: 600px; height: 600px; bottom: -20%; right: -15%; background-color: rgba(249, 115, 22, 0.15);"></div>
-                    <div class="text-center relative z-10 px-6">
-                        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight">A melhor TV e internet da região agora na sua casa</h1>
-                        <p class="mt-4 text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">Planos de fibra óptica com a velocidade e estabilidade que você merece.</p>
-                        <div class="mt-10">
-                            <a href="#planos" class="gradient-btn text-white font-bold py-4 px-10 rounded-full shadow-xl text-lg">
-                                Conheça os Planos
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 2 -->
-                <div class="hero-carousel-slide slide-bg-2">
-                    <div class="slide-shape" style="width: 700px; height: 700px; top: -20%; right: -20%; background-color: rgba(251, 146, 60, 0.2);"></div>
-                    <div class="text-center relative z-10 px-6">
-                        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight">🚀 Ultra Velocidade para Navegar sem Limites</h1>
-                        <p class="mt-4 text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">Ideal para jogos online, streaming em 4K e home office.</p>
-                        <div class="mt-10">
-                            <a href="#planos" class="gradient-btn text-white font-bold py-4 px-10 rounded-full shadow-xl text-lg">
-                                Ver Planos de Internet
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="hero-carousel-slide slide-bg-3">
-                    <div class="slide-shape" style="width: 500px; height: 500px; bottom: -15%; left: -10%; background-color: rgba(59, 130, 246, 0.15);"></div>
-                     <div class="slide-shape" style="width: 400px; height: 400px; top: -10%; right: 10%; background-color: rgba(249, 115, 22, 0.1);"></div>
-                    <div class="text-center relative z-10 px-6">
-                        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight">📺 A TV que sua família ama, com imagem de cinema</h1>
-                        <p class="mt-4 text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">Canais em alta definição para todos os gostos e idades.</p>
-                        <div class="mt-10">
-                            <a href="#planos" class="gradient-btn text-white font-bold py-4 px-10 rounded-full shadow-xl text-lg">
-                                Ver Planos com TV
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Botões de Navegação do Carrossel -->
-            <button id="hero-prev-btn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/50 p-3 rounded-full shadow-md hover:bg-white transition z-20">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
-            </button>
-            <button id="hero-next-btn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/50 p-3 rounded-full shadow-md hover:bg-white transition z-20">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-            </button>
-        </section>
-
-        <!-- Seção Consulta de Cobertura -->
-        <section id="cobertura" class="py-16 md:py-20 bg-slate-50">
-            <div class="container mx-auto px-6">
-                <div class="max-w-3xl mx-auto text-center">
-                    <h2 class="text-3xl font-bold text-slate-900">Consulte sua Cobertura</h2>
-                    <p class="mt-2 text-slate-600">Digite seu CEP ou endereço para verificar se a nossa fibra já chegou no seu bairro.</p>
-                </div>
-                <div class="mt-8 max-w-xl mx-auto flex flex-col sm:flex-row gap-3 shadow-lg shadow-slate-200 rounded-full p-2 bg-white">
-                    <input id="endereco-input" type="text" placeholder="Digite seu CEP ou endereço completo" class="w-full px-5 py-3 rounded-full bg-transparent text-slate-700 focus:outline-none">
-                    <button id="consultar-btn" class="w-full sm:w-auto gradient-btn text-white font-bold py-3 px-8 rounded-full">
-                        Consultar
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção de Planos -->
-        <section id="planos" class="py-16 md:py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center text-slate-900 mb-2">Nossos Planos</h2>
-                <p class="text-center text-slate-500 mb-12">Escolha a velocidade perfeita para você.</p>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    
-                    <!-- Plano 1: 300 Mega -->
-                    <div class="plan-card bg-white rounded-2xl p-8 flex flex-col text-left">
-                        <h3 class="text-2xl font-bold text-slate-800">300 Mega</h3>
-                        <p class="text-slate-500 mt-1">Ideal para o dia a dia</p>
-                        <div class="my-6">
-                            <span class="text-5xl font-extrabold text-slate-900">R$100</span>
-                            <span class="text-slate-500">/mês</span>
-                        </div>
-                        <p class="text-green-600 font-semibold bg-green-100 rounded-full px-4 py-1 self-start text-sm mb-6">Promo: R$ 79,90 nos 2 primeiros meses</p>
-                        <ul class="space-y-3 text-slate-600 mb-8">
-                            <li class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>Fibra Óptica</li>
-                            <li class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-500" viewBox="0 0 20 20" fill="currentColor"><path d="M5.5 16a3.5 3.5 0 01-3.5-3.5V2.5A2.5 2.5 0 014.5 0H11a2.5 2.5 0 012.5 2.5v1.5a.5.5 0 01-1 0V2.5a1.5 1.5 0 00-1.5-1.5H4.5a1.5 1.5 0 00-1.5 1.5v10a2.5 2.5 0 002.5 2.5h10a1.5 1.5 0 001.5-1.5V10a.5.5 0 011 0v2.5a2.5 2.5 0 01-2.5 2.5h-8.5z" /><path d="M16 4a1 1 0 100-2 1 1 0 000 2zM6 8a1 1 0 100-2 1 1 0 000 2zm4 4a1 1 0 100-2 1 1 0 000 2zm4-4a1 1 0 100-2 1 1 0 000 2z" /></svg>Wi-Fi Grátis</li>
-                        </ul>
-                        <a href="https://wa.me/5511970632791?text=Olá!%20Tenho%20interesse%20em%20contratar%20o%20plano%20de%20300%20Mega." target="_blank" class="mt-auto w-full text-center bg-slate-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-slate-900 transition-colors">Contratar Agora</a>
-                    </div>
-                    
-                    <!-- Plano 2: 400 Mega + TV (Mais Popular) -->
-                    <div class="plan-card bg-slate-900 text-white rounded-2xl p-8 flex flex-col text-left relative overflow-hidden" style="transform: scale(1.05);">
-                        <span class="absolute top-4 right-4 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">MAIS POPULAR</span>
-                        <h3 class="text-2xl font-bold text-white">400 Mega + TV</h3>
-                        <p class="text-slate-400 mt-1">A escolha da galera</p>
-                        <div class="my-6">
-                            <span class="text-5xl font-extrabold text-white">R$120</span>
-                            <span class="text-slate-400">/mês</span>
-                        </div>
-                        <ul class="space-y-3 text-slate-300 mb-8">
-                            <li class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>Fibra Óptica de Alta Velocidade</li>
-                            <li class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-400" viewBox="0 0 20 20" fill="currentColor"><path d="M5.5 16a3.5 3.5 0 01-3.5-3.5V2.5A2.5 2.5 0 014.5 0H11a2.5 2.5 0 012.5 2.5v1.5a.5.5 0 01-1 0V2.5a1.5 1.5 0 00-1.5-1.5H4.5a1.5 1.5 0 00-1.5 1.5v10a2.5 2.5 0 002.5 2.5h10a1.5 1.5 0 001.5-1.5V10a.5.5 0 011 0v2.5a2.5 2.5 0 01-2.5 2.5h-8.5z" /><path d="M16 4a1 1 0 100-2 1 1 0 000 2zM6 8a1 1 0 100-2 1 1 0 000 2zm4 4a1 1 0 100-2 1 1 0 000 2zm4-4a1 1 0 100-2 1 1 0 000 2z" /></svg>Wi-Fi Grátis</li>
-                            <li class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-400" viewBox="0 0 20 20" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z" /><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.022 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" /></svg>Canais de TV Inclusos</li>
-                        </ul>
-                        <a href="https://wa.me/5511970632791?text=Olá!%20Tenho%20interesse%20em%20contratar%20o%20plano%20de%20400%20Mega%20e%20TV." target="_blank" class="mt-auto w-full text-center gradient-btn text-white font-bold py-3 px-6 rounded-lg">Contratar Agora</a>
-                    </div>
-
-                    <!-- Plano 3: 800 Mega + TV + Netflix -->
-                    <div class="plan-card bg-white rounded-2xl p-8 flex flex-col text-left">
-                        <h3 class="text-2xl font-bold text-slate-800">800 Mega + Netflix</h3>
-                        <p class="text-slate-500 mt-1">Pra quem quer tudo</p>
-                        <div class="my-6">
-                            <span class="text-5xl font-extrabold text-slate-900">R$170</span>
-                            <span class="text-slate-500">/mês</span>
-                        </div>
-                        <ul class="space-y-3 text-slate-600 mb-8">
-                           <li class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>Velocidade Máxima</li>
-                            <li class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-500" viewBox="0 0 20 20" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z" /><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.022 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" /></svg>Todos os Canais de TV</li>
-                            <li class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-500" viewBox="0 0 20 20" fill="currentColor"><path d="M2 6a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2-2H4a2 2 0 01-2-2V6zm3.293 2.293a1 1 0 011.414 0L10 11.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" /></svg>Assinatura Netflix Inclusa</li>
-                        </ul>
-                        <a href="https://wa.me/5511970632791?text=Olá!%20Tenho%20interesse%20em%20contratar%20o%20plano%20de%20800%20Mega,%20TV%20e%20Netflix." target="_blank" class="mt-auto w-full text-center bg-slate-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-slate-900 transition-colors">Contratar Agora</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção de Chamada para Canais -->
-        <section class="py-16 bg-slate-50">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold text-slate-900">Nossa Grade de Canais Completa</h2>
-                <p class="mt-2 text-slate-600 max-w-2xl mx-auto">De filmes e séries a esportes e desenhos, temos a programação perfeita para toda a família.</p>
-                <button id="open-channels-btn-main" class="mt-6 inline-block gradient-btn text-white font-bold py-3 px-8 rounded-full shadow-lg">
-                    Ver Todos os Canais
-                </button>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Rodapé -->
-    <footer class="bg-slate-800 text-slate-300">
-        <div class="container mx-auto px-6 py-10">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left items-center">
-                <div>
-                    <img src="https://rwfibra.github.io/site-motiwa/logo-rodape.jpg" alt="Logo Motiwa Telecom" class="h-10 mx-auto md:mx-0">
-                    <a href="https://wa.me/5511970632791?text=Olá!%20Gostaria%20de%20assinar%20um%20plano." target="_blank" class="mt-4 inline-flex items-center gap-2 bg-green-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-600 transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                        Assine Já
-                    </a>
-                </div>
-                <div>
-                    <h4 class="font-bold text-lg text-white">Links Rápidos</h4>
-                    <ul class="mt-4 space-y-2">
-                        <li><a href="#planos" class="text-slate-400 hover:text-orange-400 transition-colors">Planos</a></li>
-                        <li><button id="open-channels-btn-footer" class="text-slate-400 hover:text-orange-400 transition-colors">Canais</button></li>
-                        <li><a href="#cobertura" class="text-slate-400 hover:text-orange-400 transition-colors">Cobertura</a></li>
-                        <li><a href="https://motiwatelecom.sgp.net.br/accounts/central/login" target="_blank" class="text-slate-400 hover:text-orange-400 transition-colors">2ª Via de Fatura</a></li>
-                    </ul>
-                </div>
-                <div class="flex justify-center md:justify-start">
-                    <!-- Link para a imagem do mascote -->
-                    <img src="https://rwfibra.github.io/site-motiwa/mascote-rodape.jpg" 
-                         onerror="this.onerror=null; this.src='https://placehold.co/180x80/1E293B/FFFFFF?text=Mascote'" 
-                         alt="Mascote Contato" 
-                         class="h-20">
-                </div>
-            </div>
-            <div class="mt-8 border-t border-slate-700 pt-6 text-center text-slate-500 text-sm">
-                &copy; 2024 Motiwa Telecom. Todos os direitos reservados.
-            </div>
-        </div>
-    </footer>
-    
-    <!-- Modal para Consulta de Cobertura -->
-    <div id="coverage-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-        <div class="bg-white rounded-lg p-8 max-w-sm w-full mx-4 text-center shadow-xl">
-            <h3 id="coverage-modal-title" class="text-2xl font-bold text-slate-800"></h3>
-            <p id="coverage-modal-message" class="mt-2 text-slate-600"></p>
-            <button id="coverage-modal-close-btn" class="mt-6 gradient-btn text-white font-bold py-2 px-6 rounded-lg">
-                Fechar
-            </button>
+            <a href="https://motiwatelecom.sgp.net.br/accounts/central/login" target="_blank" class="bg-orange-500 text-white font-bold py-3 px-6 rounded-full hover:bg-orange-600 transition-colors">
+                2ª Via de Fatura
+            </a>
         </div>
     </div>
-
-    <!-- Modal para Grade de Canais -->
-    <div id="channels-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[100] hidden p-4">
-        <div class="bg-white rounded-2xl shadow-xl w-full max-w-5xl max-h-[90vh] flex flex-col">
-            <div class="p-6 border-b">
-                <h2 class="text-2xl font-bold text-slate-900 text-center">Nossa Grade de Canais</h2>
-            </div>
-            <div class="p-8 sm:p-10 overflow-y-auto">
-                <div class="channel-list space-y-2 text-slate-700 text-base">
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">06.2</span> SPORTV</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">10.2</span> VIVA</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">10.3</span> MULTISHOW</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">61.1</span> GLOBO NEWS</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">61.2</span> COMBATE</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">61.3</span> STUDIO UNIVERSAL</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">62.1</span> TELECINE FUN</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">62.2</span> TELECINE PIPOCA</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">62.3</span> TELECINE ACTION</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">63.1</span> TELECINE PREMIUM</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">63.2</span> CARTOON NETWORK</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">63.3</span> GLOOB</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">64.1</span> TNT SÉRIES</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">64.2</span> MEGAPIX</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">64.3</span> SPACE HD</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">65.1</span> DISCOVERY CHANNEL</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">65.2</span> DISCOVERY ID</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">65.3</span> DISCOVERY H&H</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">66.1</span> ANIMAL PLANET</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">66.2</span> CINEMAX HD</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">66.3</span> DISCOVERY KIDS</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">67.1</span> WARNER CHANNEL</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">67.2</span> A&E HD</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">67.3</span> HISTORY HD</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">68.1</span> PARAMOUNT</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">68.2</span> HBO2</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">68.3</span> SONY CHANNEL</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">69.1</span> JOVEM PAN NEWS</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">69.2</span> UNIVERSAL TV</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">69.3</span> TNT</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">70.1</span> PREMIERE CLUBE</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">70.2</span> PREMIERE 2</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">70.3</span> ESPN</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">71.1</span> AXN</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">71.2</span> BRASILEIRÃO PRIME VÍDEO</p>
-                    <p><span class="font-bold text-orange-600 w-20 inline-block">71.3</span> NICKELODEON</p>
-                </div>
-            </div>
-            <div class="p-6 border-t text-center">
-                <button id="channels-modal-close-btn" class="bg-slate-200 text-slate-700 font-bold py-2 px-6 rounded-lg hover:bg-slate-300 transition-colors">
-                    Fechar
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // --- Script para garantir que tudo rode após o carregamento da página ---
-        window.addEventListener('load', () => {
-            
-            // --- Script para menu mobile ---
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            if (mobileMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                });
-            }
-
-            // --- Script para modal de consulta de cobertura ---
-            const consultarBtn = document.getElementById('consultar-btn');
-            const enderecoInput = document.getElementById('endereco-input');
-            const coverageModal = document.getElementById('coverage-modal');
-            const coverageModalTitle = document.getElementById('coverage-modal-title');
-            const coverageModalMessage = document.getElementById('coverage-modal-message');
-            const coverageModalCloseBtn = document.getElementById('coverage-modal-close-btn');
-
-            if (consultarBtn) {
-                consultarBtn.addEventListener('click', () => {
-                    const endereco = enderecoInput.value.trim();
-                    if (endereco === '') {
-                        coverageModalTitle.textContent = 'Atenção!';
-                        coverageModalMessage.textContent = 'Por favor, digite seu endereço ou CEP para realizar a consulta.';
-                    } else {
-                        coverageModalTitle.textContent = 'Ótima Notícia! 🎉';
-                        coverageModalMessage.textContent = `Nossa fibra óptica já está disponível na região de "${endereco}"! Entre em contato para contratar.`;
-                    }
-                    coverageModal.classList.remove('hidden');
-                });
-            }
-            if(coverageModalCloseBtn) {
-                coverageModalCloseBtn.addEventListener('click', () => coverageModal.classList.add('hidden'));
-            }
-            if(coverageModal) {
-                coverageModal.addEventListener('click', (e) => {
-                    if (e.target === coverageModal) coverageModal.classList.add('hidden');
-                });
-            }
-
-            // --- Script para modal de canais ---
-            const channelsModal = document.getElementById('channels-modal');
-            const openChannelsBtns = [
-                document.getElementById('open-channels-btn-header'),
-                document.getElementById('open-channels-btn-mobile'),
-                document.getElementById('open-channels-btn-main'),
-                document.getElementById('open-channels-btn-footer')
-            ];
-            const closeChannelsBtn = document.getElementById('channels-modal-close-btn');
-
-            if(channelsModal) {
-                openChannelsBtns.forEach(btn => {
-                    if (btn) btn.addEventListener('click', () => channelsModal.classList.remove('hidden'));
-                });
-                if (closeChannelsBtn) {
-                    closeChannelsBtn.addEventListener('click', () => channelsModal.classList.add('hidden'));
-                }
-                channelsModal.addEventListener('click', (e) => {
-                    if (e.target === channelsModal) channelsModal.classList.add('hidden');
-                });
-            }
-
-
-            // --- Script para o Carrossel do Topo ---
-            const heroTrack = document.getElementById('hero-carousel-track');
-            const heroNextButton = document.getElementById('hero-next-btn');
-            const heroPrevButton = document.getElementById('hero-prev-btn');
-
-            if (heroTrack && heroNextButton && heroPrevButton) {
-                const heroSlides = Array.from(heroTrack.children);
-                let heroCurrentIndex = 0;
-                let heroSlideWidth = 0;
-
-                const updateSlideWidth = () => {
-                    if (heroSlides.length === 0) return;
-                    heroSlideWidth = heroSlides[0].getBoundingClientRect().width;
-                    if (heroSlideWidth === 0) return; 
-                    heroTrack.style.transform = 'translateX(-' + heroSlideWidth * heroCurrentIndex + 'px)';
-                }
-
-                const moveToHeroSlide = (targetIndex) => {
-                    if (heroSlides.length === 0 || heroSlideWidth === 0) return;
-                    heroTrack.style.transform = 'translateX(-' + heroSlideWidth * targetIndex + 'px)';
-                    heroCurrentIndex = targetIndex;
-                }
-
-                heroNextButton.addEventListener('click', () => {
-                    if (heroSlides.length === 0) return;
-                    const nextIndex = (heroCurrentIndex + 1) % heroSlides.length;
-                    moveToHeroSlide(nextIndex);
-                });
-
-                heroPrevButton.addEventListener('click', () => {
-                    if (heroSlides.length === 0) return;
-                    let prevIndex = heroCurrentIndex - 1;
-                    if (prevIndex < 0) {
-                        prevIndex = heroSlides.length - 1;
-                    }
-                    moveToHeroSlide(prevIndex);
-                });
-
-                // Autoplay do carrossel
-                setInterval(() => {
-                    if (heroSlides.length === 0) return;
-                    const nextIndex = (heroCurrentIndex + 1) % heroSlides.length;
-                    moveToHeroSlide(nextIndex);
-                }, 7000);
-
-                // Atualiza a largura do slide quando a janela é redimensionada
-                window.addEventListener('resize', updateSlideWidth);
-                
-                // Inicializa a largura do slide
-                updateSlideWidth();
-            }
-        });
-    </script>
 
 </body>
 </html>
