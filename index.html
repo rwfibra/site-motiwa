@@ -3,466 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motiwa Telecom - Página de Vendas</title>
+    <title>Motiwa Telecom - Em Manutenção</title>
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Swiper.js CSS CDN -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <style>
-        /* Estilo para a fonte Inter */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* bg-slate-50 */
-        }
-        /* Efeito de scroll suave */
-        html {
-            scroll-behavior: smooth;
-        }
-        /* Personalização dos bullets do Swiper */
-        .swiper-pagination-bullet {
-            background: #fff;
-            opacity: 0.7;
-        }
-        .swiper-pagination-bullet-active {
-            background-color: #f97316 !important; /* Laranja */
-            opacity: 1;
-        }
-        .swiper-button-next, .swiper-button-prev {
-            color: #fff !important;
-            --swiper-navigation-size: 32px;
-        }
-        .card-glow {
-            box-shadow: 0 0 15px rgba(249, 115, 22, 0.4), 0 0 30px rgba(249, 115, 22, 0.2);
-        }
-        /* Estilos para o Modal */
-        .modal-overlay {
-            transition: opacity 0.3s ease;
-        }
-        .modal-content {
-            transition: transform 0.3s ease;
-        }
-        /* Ajuste para o carrossel de planos */
-        .plan-swiper .swiper-slide {
-            height: auto;
-            display: flex;
-            align-items: stretch;
         }
     </style>
 </head>
-<body class="text-slate-800">
+<body class="bg-slate-50">
 
-    <!-- CABEÇALHO -->
-    <header class="sticky top-0 z-20 bg-white/80 backdrop-blur-lg shadow-sm">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div>
-                <a href="#" class="flex items-center">
-                    <div class="flex flex-col items-start leading-none">
-                        <span class="text-3xl font-extrabold text-orange-500">MOTIWA</span>
-                        <span class="text-xs font-medium text-slate-500 tracking-widest -mt-1">telecom</span>
-                    </div>
-                </a>
-            </div>
-            <div class="hidden md:flex items-center space-x-8 font-medium">
-                <a href="#planos" class="text-slate-600 hover:text-orange-500 transition duration-300">Planos</a>
-                <a href="#vantagens" class="text-slate-600 hover:text-orange-500 transition duration-300">Vantagens</a>
-                <a href="#contato" class="text-slate-600 hover:text-orange-500 transition duration-300">Contato</a>
-                <a href="https://motiwatelecom.sgp.net.br/accounts/central/login" target="_blank" class="bg-orange-500 text-white px-5 py-2 rounded-full hover:bg-orange-600 shadow-md hover:shadow-lg transition duration-300">2ª Via de Fatura</a>
-            </div>
-            <!-- Botão do Menu Mobile -->
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-slate-600 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
-        </nav>
-        <!-- Menu Mobile -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
-            <a href="#planos" class="block py-2 px-4 text-sm text-slate-600 hover:bg-orange-50">Planos</a>
-            <a href="#vantagens" class="block py-2 px-4 text-sm text-slate-600 hover:bg-orange-50">Vantagens</a>
-            <a href="#contato" class="block py-2 px-4 text-sm text-slate-600 hover:bg-orange-50">Contato</a>
-            <a href="https://motiwatelecom.sgp.net.br/accounts/central/login" target="_blank" class="block py-2 px-4 text-sm text-slate-600 hover:bg-orange-50">2ª Via de Fatura</a>
-        </div>
-    </header>
-
-    <!-- CONTEÚDO PRINCIPAL -->
-    <main>
-
-        <!-- SEÇÃO SLIDER -->
-        <section id="slider" class="w-full">
-            <div class="swiper hero-swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide relative">
-                        <div class="absolute inset-0 bg-black/40 z-10"></div>
-                        <div class="h-[60vh] md:h-[70vh] w-full bg-cover bg-center" 
-                             style="background-image: url('https://raw.githubusercontent.com/rwfibra/site-motiwa/main/banner-principal.jpg');">
-                        </div>
-                    </div>
-                    <div class="swiper-slide relative">
-                        <div class="absolute inset-0 bg-black/40 z-10"></div>
-                         <div class="h-[60vh] md:h-[70vh] w-full bg-cover bg-center flex items-center" 
-                             style="background-image: url('https://placehold.co/1920x1080/3498db/ffffff?text=Streaming+e+Jogos');">
-                             <div class="container mx-auto px-6 text-white text-center z-10">
-                                <h1 class="text-4xl md:text-6xl font-black leading-tight mb-4">Perfeita para Streaming e Jogos</h1>
-                                <p class="text-lg md:text-xl mb-8">Jogue online e assista seus filmes em 4K sem travar.</p>
-                                <a href="#planos" class="bg-white text-blue-500 font-bold px-8 py-4 rounded-full hover:bg-slate-200 transition duration-300 shadow-lg">Saiba Mais</a>
-                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination hero-pagination"></div>
-                <div class="swiper-button-next hero-next"></div>
-                <div class="swiper-button-prev hero-prev"></div>
-            </div>
-        </section>
-
-        <!-- SEÇÃO DE PLANOS -->
-        <section id="planos" class="py-24 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-extrabold text-slate-900">Planos Feitos Para Você</h2>
-                    <p class="text-slate-500 mt-4 max-w-2xl mx-auto">Escolha a velocidade ideal para sua necessidade e navegue sem limites com a melhor tecnologia.</p>
-                </div>
-                <!-- Swiper para Planos -->
-                <div class="swiper plan-swiper">
-                    <div class="swiper-wrapper py-8">
-                        <!-- Card de Plano 1 (Destaque) -->
-                        <div class="swiper-slide">
-                            <div class="bg-gradient-to-br from-orange-500 to-red-500 text-white rounded-xl shadow-2xl p-8 text-center transition duration-300 ring-4 ring-white/50 card-glow h-full flex flex-col">
-                                <div class="flex-grow">
-                                    <div class="flex justify-center items-baseline mb-2">
-                                        <span class="text-7xl md:text-8xl font-black">300</span>
-                                        <span class="text-2xl md:text-3xl font-bold ml-2">Mega</span>
-                                    </div>
-                                    <p class="text-4xl md:text-5xl font-bold mb-2">R$79<span class="text-2xl md:text-3xl align-top">,90</span><span class="text-lg md:text-xl">/mês</span></p>
-                                    <p class="text-sm text-orange-100 mb-4 font-medium">Nos 2 primeiros meses. Após, R$100,00/mês.</p>
-                                    <ul class="text-left my-8 space-y-4 text-orange-50">
-                                        <li class="flex items-center"><svg class="w-6 h-6 text-white mr-3 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>Wi-Fi 6 com mais cobertura</li>
-                                        <li class="flex items-center"><svg class="w-6 h-6 text-white mr-3 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>300 Mbps de Download</li>
-                                        <li class="flex items-center"><svg class="w-6 h-6 text-white mr-3 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>300 Mbps de Upload</li>
-                                    </ul>
-                                </div>
-                                <a href="https://wa.me/5511970632791" target="_blank" class="w-full bg-white text-orange-500 font-bold px-6 py-4 rounded-full hover:bg-slate-100 transition duration-300 shadow-lg mt-auto">QUERO ESSA OFERTA! 🔥</a>
-                            </div>
-                        </div>
-                        <!-- Card de Plano 2 -->
-                        <div class="swiper-slide">
-                            <div class="bg-slate-50 rounded-xl shadow-md p-8 text-center transition duration-300 h-full border border-slate-200 flex flex-col">
-                                <div class="flex-grow">
-                                    <div class="flex justify-center items-baseline mb-2">
-                                        <span class="text-7xl md:text-8xl font-black text-orange-500">400</span>
-                                        <span class="text-2xl md:text-3xl font-bold ml-2 text-slate-800">Mega</span>
-                                    </div>
-                                    <h3 class="text-xl md:text-2xl font-bold text-slate-700 mb-2">+ TV na Fibra</h3>
-                                    <p class="text-4xl md:text-5xl font-bold text-orange-500 mb-4">R$120<span class="text-xl md:text-2xl font-medium">/mês</span></p>
-                                    <ul class="text-left my-8 space-y-4 text-slate-600">
-                                        <li class="flex items-center"><svg class="w-6 h-6 text-orange-500 mr-3 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>Wi-Fi 6 com mais cobertura</li>
-                                        <li class="flex items-center"><svg class="w-6 h-6 text-orange-500 mr-3 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>Mais de 80 canais</li>
-                                    </ul>
-                                    <button class="openModalBtn text-orange-500 font-semibold hover:underline mb-6">Ver lista de canais</button>
-                                </div>
-                                <a href="https://wa.me/5511970632791" target="_blank" class="w-full bg-slate-800 text-white px-6 py-3 rounded-full hover:bg-slate-900 transition duration-300 mt-auto font-semibold">Contratar Agora</a>
-                            </div>
-                        </div>
-                        <!-- Card de Plano 3 -->
-                        <div class="swiper-slide">
-                            <div class="bg-slate-50 rounded-xl shadow-md p-8 text-center transition duration-300 h-full border border-slate-200 flex flex-col">
-                                <div class="flex-grow">
-                                     <div class="flex justify-center items-baseline mb-2">
-                                        <span class="text-7xl md:text-8xl font-black text-orange-500">500</span>
-                                        <span class="text-2xl md:text-3xl font-bold ml-2 text-slate-800">Mega</span>
-                                    </div>
-                                    <h3 class="text-xl md:text-2xl font-bold text-slate-700 mb-2">+ TV na Fibra</h3>
-                                    <p class="text-4xl md:text-5xl font-bold text-orange-500 mb-4">R$140<span class="text-xl md:text-2xl font-medium">/mês</span></p>
-                                    <ul class="text-left my-8 space-y-4 text-slate-600">
-                                        <li class="flex items-center"><svg class="w-6 h-6 text-orange-500 mr-3 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>Wi-Fi 6 com mais cobertura</li>
-                                        <li class="flex items-center"><svg class="w-6 h-6 text-orange-500 mr-3 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>Mais de 80 canais</li>
-                                    </ul>
-                                    <button class="openModalBtn text-orange-500 font-semibold hover:underline mb-6">Ver lista de canais</button>
-                                </div>
-                                <a href="https://wa.me/5511970632791" target="_blank" class="w-full bg-slate-800 text-white px-6 py-3 rounded-full hover:bg-slate-900 transition duration-300 mt-auto font-semibold">Contratar Agora</a>
-                            </div>
-                        </div>
-                        <!-- Card de Plano 4 -->
-                        <div class="swiper-slide">
-                            <div class="bg-slate-50 rounded-xl shadow-md p-8 text-center transition duration-300 h-full border border-slate-200 flex flex-col">
-                                <div class="flex-grow">
-                                     <div class="flex justify-center items-baseline mb-2">
-                                        <span class="text-7xl md:text-8xl font-black text-orange-500">600</span>
-                                        <span class="text-2xl md:text-3xl font-bold ml-2 text-slate-800">Mega</span>
-                                    </div>
-                                    <h3 class="text-xl md:text-2xl font-bold text-slate-700 mb-2">+ TV na Fibra</h3>
-                                    <p class="text-4xl md:text-5xl font-bold text-orange-500 mb-4">R$150<span class="text-xl md:text-2xl font-medium">/mês</span></p>
-                                    <ul class="text-left my-8 space-y-4 text-slate-600">
-                                        <li class="flex items-center"><svg class="w-6 h-6 text-orange-500 mr-3 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>Wi-Fi 6 com mais cobertura</li>
-                                        <li class="flex items-center"><svg class="w-6 h-6 text-orange-500 mr-3 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>Mais de 80 canais</li>
-                                    </ul>
-                                    <button class="openModalBtn text-orange-500 font-semibold hover:underline mb-6">Ver lista de canais</button>
-                                </div>
-                                <a href="https://wa.me/5511970632791" target="_blank" class="w-full bg-slate-800 text-white px-6 py-3 rounded-full hover:bg-slate-900 transition duration-300 mt-auto font-semibold">Contratar Agora</a>
-                            </div>
-                        </div>
-                        <!-- Card de Plano 5 (NOVO) -->
-                        <div class="swiper-slide">
-                            <div class="bg-slate-50 rounded-xl shadow-md p-8 text-center transition duration-300 h-full border border-slate-200 flex flex-col">
-                                <div class="flex-grow">
-                                     <div class="flex justify-center items-baseline mb-2">
-                                        <span class="text-7xl md:text-8xl font-black text-orange-500">800</span>
-                                        <span class="text-2xl md:text-3xl font-bold ml-2 text-slate-800">Mega</span>
-                                    </div>
-                                    <h3 class="text-xl md:text-2xl font-bold text-slate-700 mb-2">+ TV na Fibra + Netflix</h3>
-                                    <p class="text-4xl md:text-5xl font-bold text-orange-500 mb-4">R$170<span class="text-xl md:text-2xl font-medium">/mês</span></p>
-                                    <ul class="text-left my-8 space-y-4 text-slate-600">
-                                        <li class="flex items-center"><svg class="w-6 h-6 text-orange-500 mr-3 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>Wi-Fi 6 com mais cobertura</li>
-                                        <li class="flex items-center"><svg class="w-6 h-6 text-orange-500 mr-3 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>Mais de 80 canais</li>
-                                        <li class="flex items-center"><svg class="w-6 h-6 text-orange-500 mr-3 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" /></svg>Conta Netflix inclusa</li>
-                                    </ul>
-                                    <button class="openModalBtn text-orange-500 font-semibold hover:underline mb-6">Ver lista de canais</button>
-                                </div>
-                                <a href="https://wa.me/5511970632791" target="_blank" class="w-full bg-slate-800 text-white px-6 py-3 rounded-full hover:bg-slate-900 transition duration-300 mt-auto font-semibold">Contratar Agora</a>
-                            </div>
-                        </div>
-                        <!-- Card de Plano 6 (NOVO) -->
-                        <div class="swiper-slide">
-                            <div class="bg-slate-50 rounded-xl shadow-md p-8 text-center transition duration-300 h-full border border-slate-200 flex flex-col">
-                                <div class="flex-grow">
-                                     <div class="flex justify-center items-baseline mb-2">
-                                        <span class="text-7xl md:text-8xl font-black text-orange-500">400</span>
-                                        <span class="text-2xl md:text-3xl font-bold ml-2 text-slate-800">Mega</span>
-                                    </div>
-                                    <h3 class="text-xl md:text-2xl font-bold text-slate-700 mb-2">Fibra Óptica</h3>
-                                    <p class="text-4xl md:text-5xl font-bold text-orange-500 mb-4">R$100<span class="text-xl md:text-2xl font-medium">/mês</span></p>
-                                    <ul class="text-left my-8 space-y-4 text-slate-600">
-                                        <li class="flex items-center"><svg class="w-6 h-6 text-orange-500 mr-3 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>Wi-Fi 6 com mais cobertura</li>
-                                        <li class="flex items-center"><svg class="w-6 h-6 text-orange-500 mr-3 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>400 Mbps de Download</li>
-                                        <li class="flex items-center"><svg class="w-6 h-6 text-orange-500 mr-3 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>400 Mbps de Upload</li>
-                                    </ul>
-                                </div>
-                                <a href="https://wa.me/5511970632791" target="_blank" class="w-full bg-slate-800 text-white px-6 py-3 rounded-full hover:bg-slate-900 transition duration-300 mt-auto font-semibold">Contratar Agora</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination plan-pagination mt-8"></div>
-                </div>
-            </div>
-        </section>
+    <div class="flex flex-col items-center justify-center min-h-screen text-center p-6">
         
-        <!-- SEÇÃO DE VANTAGENS -->
-        <section id="vantagens" class="py-24">
-            <div class="container mx-auto px-6">
-                 <div class="text-center mb-16">
-                    <h2 class="text-4xl font-extrabold text-slate-900">Por que escolher a Motiwa?</h2>
-                    <p class="text-slate-500 mt-4 max-w-2xl mx-auto">Oferecemos mais do que apenas internet. Oferecemos a melhor experiência de conexão.</p>
+        <!-- Logo -->
+        <div class="mb-8">
+            <a href="#" class="flex items-center">
+                <div class="flex flex-col items-center leading-none">
+                    <span class="text-5xl font-extrabold text-orange-500">MOTIWA</span>
+                    <span class="text-lg font-medium text-slate-500 tracking-widest -mt-1">telecom</span>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-                    <div class="flex flex-col items-center">
-                        <div class="bg-orange-100 text-orange-500 rounded-full p-4 mb-4">
-                            <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.288 15.038a5.25 5.25 0 017.424 0M5.136 12.006a8.25 8.25 0 0113.728 0M1.984 8.974a12 12 0 0119.032 0M12 18.75a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75h-.008a.75.75 0 01-.75-.75v-.008z" /></svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-800 mb-2">Wi-Fi 6 de Verdade</h3>
-                        <p class="text-slate-500">Navegue com mais velocidade e menos interferência, conectando vários aparelhos ao mesmo tempo.</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="bg-orange-100 text-orange-500 rounded-full p-4 mb-4">
-                           <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-800 mb-2">Livros e Notícias</h3>
-                        <p class="text-slate-500">Acesso a plataformas de leitura e notícias para você se manter sempre informado.</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="bg-orange-100 text-orange-500 rounded-full p-4 mb-4">
-                            <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" /></svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-800 mb-2">Suporte Humanizado</h3>
-                        <p class="text-slate-500">Atendimento rápido e eficiente sempre que você precisar, sem robôs ou longas esperas.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <!-- BOTÃO WHATSAPP -->
-    <a href="https://wa.me/5511970632791" target="_blank" class="fixed bottom-6 right-6 z-20 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all duration-300 ease-in-out transform hover:scale-110">
-        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.903-.52-5.586-1.457l-6.354 1.654zm6.838-9.971c.184.34.422.635.71.873.287.237.611.432.959.578.347.145.719.243 1.097.287.379.043.761.036 1.14.009.4-.028.79-.095 1.168-.2.378-.104.74-.255 1.076-.45.337-.195.644-.438.908-.725.264-.288.48-.618.636-.98.156-.362.254-.755.288-1.158.034-.403.019-.81-.044-1.21-.063-.399-.18-.788-.347-1.158-.168-.37-.388-.714-.652-1.02-.264-.306-.572-.576-.913-.798-.34-.223-.71-.394-1.1-.508-.39-.113-.797-.168-1.21-.166-.413 0-.823.056-1.22.166-.398.11-.78.277-1.133.49-.354.213-.674.478-.95.785-.275.307-.5.652-.662 1.023-.163.37-.27.76-.32 1.162-.05.402-.044.81.02 1.21.063.4.18.787.342 1.158.163.37.38.71.642 1.012z"/></svg>
-    </a>
-
-    <!-- RODAPÉ -->
-    <footer id="contato" class="bg-slate-900 text-slate-300">
-        <div class="container mx-auto px-6 py-12">
-            <div class="text-center">
-                <h3 class="text-3xl font-bold text-white mb-4">Pronto para navegar na velocidade da luz?</h3>
-                <p class="mb-8 text-slate-400">Fale com um de nossos especialistas e contrate agora mesmo!</p>
-                <a href="https://wa.me/5511970632791" target="_blank" class="bg-orange-500 text-white font-bold px-8 py-4 rounded-full hover:bg-orange-600 transition duration-300 shadow-lg">Falar pelo WhatsApp</a>
-            </div>
-            <div class="mt-12 border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
-                <p class="text-slate-500">&copy; 2025 Motiwa Telecom. Todos os direitos reservados.</p>
-                <div class="flex space-x-4 mt-4 md:mt-0">
-                    <a href="#" class="hover:text-orange-500 transition duration-300">Termos de Uso</a>
-                    <a href="#" class="hover:text-orange-500 transition duration-300">Política de Privacidade</a>
-                </div>
-            </div>
+            </a>
         </div>
-    </footer>
 
-    <!-- Modal de Canais -->
-    <div id="channelsModal" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 opacity-0 hidden transition-opacity duration-300">
-        <div class="modal-content bg-white rounded-xl shadow-2xl p-8 m-4 max-w-3xl w-full max-h-[80vh] transform scale-95 transition-transform duration-300">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-bold text-slate-800">Grade de Canais</h2>
-                <button id="closeModalBtn" class="text-slate-500 hover:text-slate-800 transition-colors">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                </button>
-            </div>
-            <div class="overflow-y-auto max-h-[60vh] pr-4">
-                <ul class="space-y-2 text-slate-600 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-3">
-                    <li><strong>06.2</strong> SPORTV</li>
-                    <li><strong>10.2</strong> VIVA</li>
-                    <li><strong>10.3</strong> MULTISHOW</li>
-                    <li><strong>61.1</strong> GLOBO NEWS</li>
-                    <li><strong>61.2</strong> COMBATE</li>
-                    <li><strong>61.3</strong> STUDIO UNIVERSAL</li>
-                    <li><strong>62.1</strong> TELECINE FUN</li>
-                    <li><strong>62.2</strong> TELECINE PIPOCA</li>
-                    <li><strong>62.3</strong> TELECINE ACTION</li>
-                    <li><strong>63.1</strong> TELECINE PREMIUM</li>
-                    <li><strong>63.2</strong> CARTOON NETWORK</li>
-                    <li><strong>63.3</strong> GLOOB</li>
-                    <li><strong>64.1</strong> TNT SÉRIES</li>
-                    <li><strong>64.2</strong> MEGAPIX</li>
-                    <li><strong>64.3</strong> SPACE HD</li>
-                    <li><strong>65.1</strong> DISCOVERY CHANNEL</li>
-                    <li><strong>65.2</strong> DISCOVERY ID</li>
-                    <li><strong>65.3</strong> DISCOVERY H&H</li>
-                    <li><strong>66.1</strong> ANIMAL PLANET</li>
-                    <li><strong>66.2</strong> CINEMAX HD</li>
-                    <li><strong>66.3</strong> DISCOVERY KIDS</li>
-                    <li><strong>67.1</strong> WARNER CHANNEL</li>
-                    <li><strong>67.2</strong> A&E HD</li>
-                    <li><strong>67.3</strong> HISTORY HD</li>
-                    <li><strong>68.1</strong> PARAMOUNT</li>
-                    <li><strong>68.2</strong> HBO2</li>
-                    <li><strong>68.3</strong> SONY CHANNEL</li>
-                    <li><strong>69.1</strong> JOEM PAN NEWS</li>
-                    <li><strong>69.2</strong> UNIVERSAL TV</li>
-                    <li><strong>69.3</strong> TNT</li>
-                    <li><strong>70.1</strong> PREMIERE CLUBE</li>
-                    <li><strong>70.2</strong> PREMIERE 2</li>
-                    <li><strong>70.3</strong> ESPN</li>
-                    <li><strong>71.1</strong> AXN</li>
-                    <li><strong>71.2</strong> BRASILEIRÃO PRIME VÍDEO</li>
-                    <li><strong>71.3</strong> NICKELODEON</li>
-                </ul>
-            </div>
+        <!-- Ícone de Manutenção -->
+        <div class="mb-8">
+            <svg class="w-24 h-24 text-orange-400 animate-pulse" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.472-2.472a3.75 3.75 0 00-5.304-5.304L4.75 11.42M11.42 15.17L4.75 21" />
+            </svg>
         </div>
+
+        <!-- Título Principal -->
+        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-800 mb-4">Nosso site está em construção!</h1>
+        
+        <!-- Subtítulo -->
+        <p class="text-lg text-slate-500 max-w-2xl mb-8">
+            Estamos trabalhando para criar uma experiência incrível para você. Falta pouco para o lançamento oficial!
+        </p>
+
+        <!-- Contato -->
+        <div class="bg-white p-6 rounded-xl shadow-md border border-slate-200">
+            <p class="text-slate-600 mb-4">Precisa falar conosco? Entre em contato pelo WhatsApp.</p>
+            <a href="https://wa.me/5511970632791" target="_blank" class="inline-block bg-green-500 text-white font-bold px-8 py-4 rounded-full hover:bg-green-600 transition duration-300 shadow-lg">
+                Falar no WhatsApp
+            </a>
+        </div>
+
     </div>
-
-
-    <!-- Swiper.js JS CDN -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Inicialização do Swiper e Modal JS -->
-    <script>
-        // Swiper Hero
-        var heroSwiper = new Swiper(".hero-swiper", {
-            spaceBetween: 0,
-            centeredSlides: true,
-            effect: "fade",
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".hero-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".hero-next",
-                prevEl: ".hero-prev",
-            },
-            loop: true,
-        });
-
-        // Swiper Planos
-        var planSwiper = new Swiper(".plan-swiper", {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            pagination: {
-                el: ".plan-pagination",
-                clickable: true,
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                },
-                1280: {
-                    slidesPerView: 4,
-                    spaceBetween: 30,
-                }
-            }
-        });
-
-        // Modal
-        const openModalBtns = document.querySelectorAll('.openModalBtn');
-        const closeModalBtn = document.getElementById('closeModalBtn');
-        const modal = document.getElementById('channelsModal');
-
-        function openModal() {
-            modal.classList.remove('hidden');
-            setTimeout(() => {
-                modal.classList.remove('opacity-0');
-                modal.querySelector('.modal-content').classList.remove('scale-95');
-            }, 10);
-        }
-
-        function closeModal() {
-            modal.classList.add('opacity-0');
-            modal.querySelector('.modal-content').classList.add('scale-95');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-            }, 300); // Deve corresponder à duração da transição
-        }
-
-        openModalBtns.forEach(btn => {
-            btn.addEventListener('click', openModal);
-        });
-        
-        closeModalBtn.addEventListener('click', closeModal);
-        
-        // Fechar modal ao clicar fora
-        modal.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                closeModal();
-            }
-        });
-
-        // Fechar modal com a tecla Esc
-        window.addEventListener('keydown', (event) => {
-            if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
-                closeModal();
-            }
-        });
-
-        // Menu Mobile
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
 
 </body>
 </html>
