@@ -231,7 +231,7 @@
                     <div class="bg-gray-50 rounded-lg animate-on-scroll" style="--animation-delay: 0.2s;"><button class="faq-question flex justify-between items-center w-full p-6 text-left"><span class="text-lg font-semibold text-gray-800">Tem taxa de instalação?</span><svg class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button><div class="faq-answer px-6 pb-6"><p class="text-gray-600">Não! Em todos os nossos planos a instalação é totalmente gratuita. Nossa equipe técnica vai até sua casa ou empresa e deixa tudo funcionando sem nenhum custo adicional.</p></div></div>
                     <div class="bg-gray-50 rounded-lg animate-on-scroll" style="--animation-delay: 0.3s;"><button class="faq-question flex justify-between items-center w-full p-6 text-left"><span class="text-lg font-semibold text-gray-800">Preciso pagar por fidelidade?</span><svg class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button><div class="faq-answer px-6 pb-6"><p class="text-gray-600">Não! Na Motiwa Telecom você é livre. Nossos planos não possuem contrato de fidelidade, garantindo a você a liberdade de escolher o melhor, sem amarras.</p></div></div>
                     <div class="bg-gray-50 rounded-lg animate-on-scroll" style="--animation-delay: 0.4s;"><button class="faq-question flex justify-between items-center w-full p-6 text-left"><span class="text-lg font-semibold text-gray-800">Como posso pagar minha fatura?</span><svg class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button><div class="faq-answer px-6 pb-6"><p class="text-gray-600">Aceitamos pagamento via PIX (QR Code) e boleto bancário. Você pode acessar sua fatura a qualquer momento através da nossa <a href="https://motiwatelecom.sgp.net.br/accounts/central/login" target="_blank" class="text-orange-600 hover:underline">Central do Assinante</a>.</p></div></div>
-                    <div class="bg-gray-50 rounded-lg animate-on-scroll" style="--animation-delay: 0.5s;"><button class="faq-question flex justify-between items-center w-full p-6 text-left"><span class="text-lg font-semibold text-gray-800">Como funciona o serviço de TV?</span><svg class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button><div class="faq-answer px-6 pb-6"><p class="text-gray-600">Nossa TV é um aplicativo moderno que funciona diretamente na sua Smart TV (com sistema Google TV ou Android TV). Se a sua TV não for compatível, não tem problema! Você pode instalar o aplicativo em qualquer TV Box ou dispositivo similar para aproveitar todos os canais, filmes e séries.</p></div></div>
+                    <div class="bg-gray-50 rounded-lg animate-on-scroll" style="--animation-delay: 0.5s;"><button class="faq-question flex justify-between items-center w-full p-6 text-left"><span class="text-lg font-semibold text-gray-800">Como funciona o serviço de TV?</span><svg class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button><div class="faq-answer px-6 pb-6"><p class="text-gray-600">Nosso serviço de TV funciona em qualquer modelo de televisão que já venha com conversor digital integrado. Basta conectar nosso aparelho e você terá acesso a todos os canais, filmes e séries com a qualidade da fibra óptica, sem a necessidade de uma Smart TV.</p></div></div>
                 </div>
             </div>
         </section>
@@ -462,8 +462,6 @@
 
 
             // --- LÓGICA DO VERIFICADOR DE COBERTURA ---
-            const cepsAtendidos = ["03382070", "03382150", "03388000", "03388010", "03388020", "03388030", "03388040", "03388050", "03388060", "03388070", "03388080", "03388090", "03388100", "03388110", "03388120", "03388130", "03388140", "03388150", "03389000", "03389010", "03389020", "03389030", "03389040", "03389050", "03389060", "03389070", "03389080", "03389090", "03389100", "03389110", "03389120", "03390000", "03390001", "03390010", "03390020", "03390030", "03390040", "03390045", "03390050", "03390060", "03390070", "03390080", "03390090"];
-
             const cepInput = document.getElementById('cep-input');
             const verificarBtn = document.getElementById('verificar-cep-btn');
             const modalCobertura = document.getElementById('cobertura-modal');
@@ -516,16 +514,6 @@
                         closeCoberturaModal();
                         document.getElementById('nossos-planos').scrollIntoView({ behavior: 'smooth' });
                     };
-                } else if (type === 'offer_tv') {
-                    iconHtml = `<svg class="w-16 h-16 text-orange-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.55a2.5 2.5 0 010 4l-4.55 2.5M3 8v8a2 2 0 002 2h4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`;
-                    title = 'Quase lá!';
-                    message = `Ainda não chegamos com a fibra no CEP ${cep}, mas temos uma ótima opção de TV para você!`;
-                    actionText = 'Conhecer TV';
-                    actionClass = 'bg-orange-500 hover:bg-orange-600';
-                    actionFn = () => {
-                        closeCoberturaModal();
-                        mostrarPaginaTv();
-                    };
                 } else { // error
                     iconHtml = `<svg class="w-16 h-16 text-red-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`;
                     title = 'CEP Inválido';
@@ -558,11 +546,8 @@
                     showResult('error');
                     return;
                 }
-                if (cepsAtendidos.includes(cep)) {
-                    showResult('success', cepFormatado);
-                } else {
-                    showResult('offer_tv', cepFormatado);
-                }
+                // Lógica alterada: Sempre mostra sucesso para CEP válido
+                showResult('success', cepFormatado);
             });
 
             // --- LÓGICA GERAL DA PÁGINA ---
