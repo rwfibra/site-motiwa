@@ -221,6 +221,26 @@
             </div>
         </section>
 
+        <!-- SEÇÃO DE DOWNLOAD DE APP - ALTERADA -->
+        <section id="download-app" class="bg-white py-16 md:py-24">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="text-center mb-12 animate-on-scroll">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">Baixe nosso App</h2>
+                    <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Acesse suas faturas, gerencie sua conta e muito mais, tudo na palma da sua mão.</p>
+                </div>
+                <div class="max-w-xs mx-auto">
+                    <div class="bg-gray-50 rounded-2xl p-8 text-center flex flex-col items-center animate-on-scroll" style="--animation-delay: 0.2s;">
+                        <svg class="w-12 h-12 text-orange-600 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                        </svg>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Central do Assinante</h3>
+                        <p class="text-gray-600 flex-grow mb-6">Baixe a 2ª via da sua fatura e gerencie seu plano com facilidade.</p>
+                        <a href="app-release.apk" download class="w-full bg-orange-600 text-white font-bold py-3 rounded-lg hover:bg-orange-700 transition-colors">Baixar Agora</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="faq" class="bg-white py-16 md:py-24">
             <div class="container mx-auto px-4 md:px-8 max-w-4xl">
                 <div class="text-center mb-12 animate-on-scroll">
@@ -236,27 +256,6 @@
                 </div>
             </div>
         </section>
-    </div>
-
-    <!-- PÁGINA DE TV (INICIALMENTE OCULTA) -->
-    <div id="pagina-tv" class="hidden">
-        <div class="bg-gray-100 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-8">
-                    <h2 class="text-3xl font-extrabold text-gray-900">Demonstração da Nossa TV</h2>
-                    <p class="mt-2 text-sm text-gray-600">Veja um pouco do que você terá acesso com nosso aplicativo.</p>
-                </div>
-                <div class="bg-white p-4 md:p-8 rounded-2xl shadow-lg text-center">
-                    <video class="w-full max-w-4xl mx-auto rounded-lg shadow-lg" controls autoplay loop muted>
-                        <source src="plano-tv.mp4" type="video/mp4">
-                        Seu navegador não suporta o player de vídeo.
-                    </video>
-                </div>
-                <div class="mt-8 text-center">
-                    <button type="button" class="btn-voltar bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50">Voltar para o Início</button>
-                </div>
-            </div>
-        </div>
     </div>
 
     <!-- NOVA PÁGINA QUEM SOMOS (INICIALMENTE OCULTA) -->
@@ -394,7 +393,6 @@
 
             // --- LÓGICA DE NAVEGAÇÃO ENTRE PÁGINAS ---
             const paginaPrincipal = document.getElementById('pagina-principal');
-            const paginaTv = document.getElementById('pagina-tv');
             const paginaQuemSomos = document.getElementById('pagina-quem-somos');
             const btnsVoltar = document.querySelectorAll('.btn-voltar');
             const linkQuemSomos = document.getElementById('quem-somos-link');
@@ -403,7 +401,6 @@
 
             const hideAllPages = () => {
                 paginaPrincipal.classList.add('hidden');
-                paginaTv.classList.add('hidden');
                 paginaQuemSomos.classList.add('hidden');
             }
 
@@ -413,12 +410,6 @@
                 window.scrollTo(0, 0);
             };
             
-            const mostrarPaginaTv = () => {
-                hideAllPages();
-                paginaTv.classList.remove('hidden');
-                window.scrollTo(0, 0);
-            }
-
             const mostrarPaginaQuemSomos = (e) => {
                 if(e) e.preventDefault();
                 hideAllPages();
